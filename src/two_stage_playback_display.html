@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Two Stage Playback Display</title>
+    <link rel="stylesheet" href="two_stage_playback.css" />
+  </head>
+  <body>
+
+  <div class="player-panel">
+    <p>This player was launched from the thumbnail on the previous page.</p>
+    <div id="ytplayer"></div>
+  </div>
+
+  <script src="//www.youtube.com/iframe_api"></script>
+  <script>
+    // This code replaces the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+      var id = getIdVariable();
+      if (id) {
+        player = new YT.Player('ytplayer', {
+          height: '390',
+          width: '640',
+          videoId: id,
+          playerVars: {
+            start: 0
+          },
+          events: {
+            'onReady': onPlayerReady,
+          }
+        });
+      }
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function getIdVariable() {
+      var params = window.location.search.substring(1).split('&');
+      for (var i = 0; i < params.length; i++) {
+        var pair = params[i].split('=');
+        if( pair[0] === 'v') { return pair[1]; }
+      }
+      return false;
+    }
+  </script>
+
+  </body>
+</html>

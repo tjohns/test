@@ -1,0 +1,77 @@
+
+body {
+	background-color: rgb(235,200,170);
+}
+
+p {
+	text-align: center;
+}
+
+/* Shaded background behind lightbox */
+#lightbox-overlay {
+	opacity: 0.8;
+	display: none;
+	background-color: rgb(0,0,0);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+/* Main player element */
+#ytplayer {
+	width: 640px;
+	height: 390px;
+	z-index: 1100;
+}
+
+/* Positioning for the main player */
+.player-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.initial-hidden {
+	display: none;
+}
+
+/* A thumbnail and its caption */
+.thumb-frame {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Clickable caption under the thumbnail */
+.thumb-caption {
+	text-align: center;
+	font-weight: bold;
+	color: rgb(60,60,60);
+	background-color: rgb(170,170,170);
+	z-index: -1;
+	position: relative;
+	top: -23px;
+}
+
+
+.yt-thumbnail {
+	/* By making the iframe height > the data-thumb-height,
+	 * the clickable area of the thumbnail is extended past
+	 * the graphic. */
+	height: 110px;
+}
+
+/* The full set of thumbnails */
+.thumb-set {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}

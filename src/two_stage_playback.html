@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Two Stage Playback</title>
+    <link rel="stylesheet" href="two_stage_playback.css" />
+  </head>
+  <body>
+
+    <div class="thumb-set" >
+      <div>
+        <p>These will open the player on a new page.</p>
+        <div class="thumb-frame">
+          <div class="yt-thumbnail" data-videoid="bHQqvYy5KYo" id="thumb1"
+            data-thumb-height="90px" data-thumb-align="tl"></div>
+          <div class="thumb-caption">Thumb 1</div>
+        </div>
+
+        <div class="thumb-frame">
+          <div class="yt-thumbnail" data-videoid="M7lc1UVf-VE" id="thumb2"
+            data-thumb-height="90px" data-thumb-align="tl"></div>
+          <div class="thumb-caption">Thumb 2</div>
+        </div>
+      </div>
+
+      <div>
+        <p>These will open player lightboxes.</p>
+        <div class="thumb-frame">
+          <div class="yt-thumbnail" data-videoid="B2Iz7UF-Wls" id="thumb3"
+            data-thumb-height="90px" data-thumb-align="tl"></div>
+          <div class="thumb-caption">Thumb 3</div>
+        </div>
+
+        <div class="thumb-frame">
+          <div class="yt-thumbnail" data-videoid="tlcWiP7OLFI" id="thumb4"
+            data-thumb-height="90px" data-thumb-align="tl"></div>
+          <div class="thumb-caption">Thumb 4</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox-overlay" class="initial-hidden"></div>
+    <div id="ytplayer" class="initial-hidden player-panel"><div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//www.youtube.com/iframe_api"></script>
+    <script src="two_stage_playback.js"></script>
+
+  </body>
+</html>
